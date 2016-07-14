@@ -1,0 +1,41 @@
+<div class="jumbo">
+
+<h2>Welcome !</h2>
+
+<p>You will be able to find a lot of useful sites.
+<br>Browse to our listings. You can also use our search box.
+</p>
+
+{{#link-to 'about'class="button"}}
+    About
+{{/link-to}}
+</div>
+
+{{#each model as |rental|}}
+  
+  <article class="itemlisting">
+  <div class="title details">
+    <h3>{{rental.title}}</h3>
+  </div>
+  
+  <div class="owner details">
+    <span>{{rental.owner}}</span>  
+  </div>
+  
+  <div class="type details">
+    <span>{{rental.type}}</span>  
+  </div>
+  
+  <div class="city details">
+    <span>{{rental.city}}</span>  
+  </div>
+   
+  <div class="bedrooms details">
+    <span>{{rental.bedrooms}}</span>  
+  </div>
+  </article>
+  
+
+{{/each}}
+
+{{outlet}}
